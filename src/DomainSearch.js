@@ -11,8 +11,12 @@ const DomainSearch = () => {
     "Ugh (puke). Why would you even? Give it another shot.",
     "Try again, loser. So dumb - try another one.",
     "Don't waste your money on this sh*t. Try again.",
-    "You're ridiculous. You have a problem. Come back later."
-    // ... Add more error messages
+    "You're ridiculous. You have a problem. Come back later.",
+    "Wow, really? That's the best you've got? Have another go.",
+    "Seriously? I've seen toddlers pick better. Try once more.",
+    "That domain's as dead as disco. Give it another whirl.",
+    "You must be joking. That's laughable. Go on, try again.",
+    "Is that a typo, or are you really that clueless? Take another stab at it."
   ];
 
   const handleChange = (e) => {
