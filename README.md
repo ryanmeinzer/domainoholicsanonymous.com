@@ -10,6 +10,10 @@ Go to https://domainoholicsanonymous.com - it's mobile-friendly!
 
 Frontend Code Repository - https://github.com/ryanmeinzer/domainoholicsanonymous.com
 
+## Inspiration
+
+Realizing with Zach W. that I'm not alone in my problem with domains - the idea was born.
+
 ## Screenshot
 
 ![Domainoholics Anonynous Screenshot](/domainoholicsanonymous-screenshot.png)
