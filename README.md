@@ -1,6 +1,6 @@
 # Domainoholics Anonymous
 
-Have problem with domains? There's a solution.
+Have a problem with domains? There's a solution.
 
 ## Use
 
