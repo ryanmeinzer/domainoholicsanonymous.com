@@ -42,17 +42,15 @@ const DomainSearch = () => {
   ];
 
   const handleChange = (e) => {
-    let value = e.target.value;
-    // Only allow first char as uppercase, auto transform the rest
-    value = value.charAt(0) + value.slice(1).toLowerCase();
-    // Allow only alphanumeric characters
+    const value = e.target.value;
+    // // Allow only alphanumeric characters
     if (/^[a-zA-Z0-9]*$/.test(value)) {
       setInputValue(value);
       setShowError(false);
       setError('');
     } else {
       setShowError(true);
-      setError("Only alphanumeric characters are permitted in domains.");
+      setError("Only alphanumeric characters for domains here.");
       // Set a timeout to clear the error after two seconds
       setTimeout(() => {
         setShowError(false);
@@ -63,13 +61,13 @@ const DomainSearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Clear alphanumeric error if any
+    // // Clear alphanumeric error if any
     if (/^[a-zA-Z0-9]+$/.test(inputValue)) {
       const randomErrorMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)];
       setError(randomErrorMessage);
       setShowError(true);
     }
-  };  
+  };
 
   return (
     <div className="domain-search-wrapper">
