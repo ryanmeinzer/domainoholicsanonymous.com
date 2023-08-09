@@ -7,8 +7,11 @@ const DomainSearch = () => {
   const [showError, setShowError] = useState(false);
 
   const errorMessages = [
-    "Error 1: Invalid domain",
-    "Error 2: Domain not found",
+    "That's a stupid domain. Try another.",
+    "Ugh (puke). Why would you even? Give it another shot.",
+    "Try again, loser. So dumb - try another one.",
+    "Don't waste your money on this sh*t. Try again.",
+    "You're ridiculous. You have a problem. Come back later."
     // ... Add more error messages
   ];
 
