@@ -1,10 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './DomainSearch.css';
 
 const DomainSearch = () => {
   const [error, setError] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [showError, setShowError] = useState(false);
+  const [placeholderText, setPlaceholderText] = useState('Type the domain you want');
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setPlaceholderText('Type desired domain'); // Placeholder for mobile
+      } else {
+        setPlaceholderText('Type the domain you want'); // Placeholder for desktop
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array to run only on mount and unmount
 
   const errorMessages = [
     "That's a stupid domain. Try another.",
@@ -53,7 +75,7 @@ const DomainSearch = () => {
         <div className="input-wrapper">
           <input
             type="text"
-            placeholder="Type the domain you want"
+            placeholder={placeholderText}
             value={inputValue}
             onChange={handleChange}
             className={showError ? 'error-input' : ''}

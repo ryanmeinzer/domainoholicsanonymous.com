@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
 }
 
 .input-wrapper {
@@ -10,8 +11,7 @@
 }
 
 input {
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
   height: 60px;
   padding: 10px 20px;
   border: none;
@@ -29,8 +29,7 @@ input::placeholder {
 }
 
 button {
-  width: 100%;
-  max-width: 175px;
+  width: 175px;
   height: 60px;
   background-color: #39828A;
   border: none;
@@ -60,7 +59,7 @@ button:hover {
 
 .top-border {
   background-color: #A36848; /* Border color */
-  padding: 15px; /* Adjust padding as needed */
+  padding: 15px; /* Adjust padding as needed */ 
 }
 
 .title {
@@ -75,21 +74,25 @@ form {
 }
 
 @media (max-width: 768px) {
-  .input-wrapper {
-    flex-direction: column;
-    align-items: center;
+  input {
+    width: 90%; /* Adjust as needed for mobile */
+    max-width: 200px; /* Prevent it from becoming too wide on large mobile screens */
+    font-size: 16px;
   }
 
-  input {
-    width: 90%;
-    max-width: 400px;
+  .top-border {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px; /* Adjust as needed for mobile */
   }
 
   button {
-    width: 90%;
-    max-width: 400px;
-    margin-top: 10px;
+    width: 90%; /* Adjust as needed for mobile */
+    max-width: 100px; /* Prevent it from becoming too wide on large mobile screens */
+    font-size: 16px;
   }
 
-  /* Additional styling adjustments for mobile */
+  /* Additional mobile-specific styles */
 }
