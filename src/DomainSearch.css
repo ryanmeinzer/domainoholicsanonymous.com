@@ -10,7 +10,8 @@
 }
 
 input {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 60px;
   padding: 10px 20px;
   border: none;
@@ -28,7 +29,8 @@ input::placeholder {
 }
 
 button {
-  width: 175px;
+  width: 100%;
+  max-width: 175px;
   height: 60px;
   background-color: #39828A;
   border: none;
@@ -70,4 +72,24 @@ button:hover {
 
 form {
   margin-top: 40px; /* Adjust the margin as needed */
+}
+
+@media (max-width: 768px) {
+  .input-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  button {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 10px;
+  }
+
+  /* Additional styling adjustments for mobile */
 }
