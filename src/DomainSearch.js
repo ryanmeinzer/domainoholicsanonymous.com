@@ -35,14 +35,16 @@ const DomainSearch = () => {
     "Don't waste your money on this sh*t. Try again.",
     "That's downright ridiculous. You have a problem. Come back later.",
     "That's the best you've got? Have another go.",
-    "Seriously? A baby could do better in their sleep. Try once more.",
+    "Don't quick your day job on this one. Try once more.",
     "Just give up. Go home, then give it another whirl.",
     "You must be joking, try again.",
     "Is that a typo, or are you really that dumb? Take another stab at it."
   ];
 
   const handleChange = (e) => {
-    const value = e.target.value;
+    let value = e.target.value;
+    // Only allow first char as uppercase, auto transform the rest
+    value = value.charAt(0) + value.slice(1).toLowerCase();
     // Allow only alphanumeric characters
     if (/^[a-zA-Z0-9]*$/.test(value)) {
       setInputValue(value);
