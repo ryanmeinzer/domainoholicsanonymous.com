@@ -50,7 +50,8 @@ const DomainSearch = () => {
       setError('');
     } else {
       setShowError(true);
-      setError("Only alphanumeric characters for domains here.");
+      // setError("Only alphanumeric characters for domains here.");
+      setError("Only enter letters and numbers. We'll search all domain extensions like .com, .org, etc.");
       // Set a timeout to clear the error after two seconds
       setTimeout(() => {
         setShowError(false);
